@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ART STUDIO LUTSK — рамки для LEGO автомобілів.">
+  <title>ART STUDIO LUTSK — LEGO Art Frames</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="#home" class="logo" aria-label="ART STUDIO LUTSK">
+      <span class="logo-mark">AS</span>
+      <span><b>ART STUDIO</b><small>LUTSK</small></span>
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="#catalog">Каталог</a>
+      <a href="#about">Про нас</a>
+      <a href="#delivery">Доставка</a>
+      <button class="cart-button" id="openCart">Кошик <span id="cartCount">0</span></button>
+      <button class="owner-button" id="openAdmin">Власник</button>
+    </nav>
+
+    <button class="mobile-menu" id="mobileMenu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">ART STUDIO LUTSK / LEGO ART</p>
+        <h1>Твоя модель.<br><span>Твоя історія.</span><br>Твоя рамка.</h1>
+        <p class="hero-text">
+          Стильні настінні рамки для зібраних LEGO автомобілів.
+          Перетворюємо колекцію на справжній предмет інтер'єру.
+        </p>
+        <div class="hero-actions">
+          <a class="button dark" href="#catalog">Дивитися колекцію</a>
+          <a class="button light" href="#about">Про ART STUDIO</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="images/williams-2.jpg" alt="ART STUDIO LUTSK — Williams FW14B">
+        <div class="hero-badge">
+          <span>01</span>
+          <b>WILLIAMS FW14B</b>
+          <small>ART FRAME / LUTSK</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog section" id="catalog">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">КОЛЕКЦІЯ</p>
+          <h2>Арт-рамки</h2>
+        </div>
+        <p>Натисни на картину, щоб переглянути всі фото та повний опис.</p>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">ART STUDIO LUTSK</p>
+        <h2>Ми робимо<br>не просто<br>рамки.</h2>
+      </div>
+      <div class="about-copy">
+        <p>
+          Ми створюємо готові настінні композиції для ваших зібраних LEGO
+          моделей: рамка, фон, кріплення, місце для таблички та мініфігурки —
+          усе продумано як єдина робота.
+        </p>
+        <div class="about-list">
+          <div><b>01</b><span>Алюмінієвий профіль</span></div>
+          <div><b>02</b><span>Оргскло 3 мм високої прозорості</span></div>
+          <div><b>03</b><span>Надійне кріплення моделі</span></div>
+          <div><b>04</b><span>Фірмове захисне пакування</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery section" id="delivery">
+    <div class="container">
+      <p class="eyebrow">ЯК ЗАМОВИТИ</p>
+      <h2>Три прості кроки</h2>
+      <div class="steps">
+        <div><b>01</b><h3>Обираєш товар</h3><p>Відкриваєш картину та переглядаєш фото.</p></div>
+        <div><b>02</b><h3>Натискаєш «Замовити»</h3><p>Відкриється Telegram з готовим повідомленням.</p></div>
+        <div><b>03</b><h3>Спілкуєшся з нами</h3><p>Ми відповідаємо в Telegram та узгоджуємо оплату і доставку.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="logo">
+      <span class="logo-mark">AS</span>
+      <span><b>ART STUDIO</b><small>LUTSK</small></span>
+    </div>
+    <a href="https://t.me/blymz" target="_blank" rel="noopener">@blymz</a>
+    <p>© 2026 ART STUDIO LUTSK</p>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+  <div class="product-modal">
+    <button class="close" id="closeProduct">×</button>
+
+    <div class="gallery">
+      <div class="gallery-main">
+        <img id="modalImage" src="" alt="">
+        <button class="gallery-arrow prev" id="prevPhoto">‹</button>
+        <button class="gallery-arrow next" id="nextPhoto">›</button>
+        <div class="gallery-counter" id="galleryCounter">1 / 1</div>
+      </div>
+      <div class="thumbnails" id="thumbnails"></div>
+    </div>
+
+    <div class="product-modal-info">
+      <p class="eyebrow">ART FRAME</p>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="description" id="modalDescription"></div>
+
+      <a class="telegram-order" id="telegramOrder" href="#" target="_blank" rel="noopener">
+        Замовити в Telegram
+        <span>↗</span>
+      </a>
+      <button class="secondary-order" id="modalAddToCart">Додати в кошик</button>
+      <p class="telegram-hint">Після натискання відкриється Telegram → <b>@blymz</b>. Ми особисто відповімо та узгодимо оплату.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head">
+    <h2>Кошик</h2>
+    <button id="closeCart">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-bottom">
+    <div class="total"><span>Разом</span><strong id="cartTotal">0 ₴</strong></div>
+    <button class="button dark full" id="telegramCart">Замовити все в Telegram</button>
+  </div>
+</aside>
+
+<!-- ADMIN -->
+<div class="modal" id="adminModal">
+  <div class="admin-box">
+    <button class="close" id="closeAdmin">×</button>
+    <div id="adminLogin">
+      <p class="eyebrow">OWNER AREA</p>
+      <h2>Панель власника</h2>
+      <p class="muted">Демо-захист для локального сайту.</p>
+      <input type="password" id="adminPassword" placeholder="Пароль">
+      <button class="button dark full" id="loginAdmin">Увійти</button>
+      <p class="admin-warning">Для справжнього інтернет-магазину пароль потрібно перенести на сервер, а не зберігати в JS.</p>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+      <p class="eyebrow">OWNER AREA</p>
+      <h2>Товари</h2>
+
+      <form id="addProductForm" class="admin-form">
+        <input id="newName" required placeholder="Назва товару">
+        <input id="newPrice" required type="number" min="0" placeholder="Ціна, грн">
+        <input id="newImage" required placeholder="Шлях до фото, напр. images/car.jpg">
+        <textarea id="newDescription" required rows="5" placeholder="Опис товару"></textarea>
+        <input id="newGallery" placeholder="Фото через кому: images/1.jpg, images/2.jpg">
+        <button class="button dark full" type="submit">+ Додати товар</button>
+      </form>
+
+      <div class="admin-products" id="adminProducts"></div>
+
+      <button class="button light full" id="logoutAdmin">Вийти</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
